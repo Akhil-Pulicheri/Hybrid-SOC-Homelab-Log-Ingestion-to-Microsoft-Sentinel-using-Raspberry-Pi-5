@@ -34,3 +34,25 @@ The Raspberry Pi was onboarded as a hybrid machine using Azure Arc.
 
 ```bash
 sudo azcmagent show
+
+## 🎯 Project Objectives
+
+- Build a hybrid SOC lab using low-cost hardware
+- Ingest Linux system logs into Microsoft Sentinel
+- Simulate authentication events and system activity
+- Practice KQL-based threat hunting
+- Develop detection logic for suspicious behavior
+
+## 🧪 Threat Simulation
+
+To simulate real-world security events, I generated:
+
+- Failed SSH login attempts
+- Privilege escalation attempts
+- System service activity logs
+
+Example failed login test:
+
+```bash
+ssh wronguser@localhost
+
