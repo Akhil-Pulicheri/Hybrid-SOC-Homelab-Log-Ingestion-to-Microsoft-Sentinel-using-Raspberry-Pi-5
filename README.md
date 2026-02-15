@@ -33,7 +33,7 @@ Raspberry Pi 5 (Ubuntu 24.04)
 The Raspberry Pi was onboarded as a hybrid machine using Azure Arc.
 
 ```bash
-sudo azcmagent show
+sudo azcmagent show .
 
 ## 🎯 Project Objectives
 
