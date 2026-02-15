@@ -43,16 +43,4 @@ sudo azcmagent show
 - Practice KQL-based threat hunting
 - Develop detection logic for suspicious behavior
 
-## 🧪 Threat Simulation
-
-To simulate real-world security events, I generated:
-
-- Failed SSH login attempts
-- Privilege escalation attempts
-- System service activity logs
-
-Example failed login test:
-
-```bash
-ssh wronguser@localhost
 
