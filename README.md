@@ -1,20 +1,36 @@
-# Designed and deployed a hybrid security monitoring homelab using Raspberry Pi 5 (Ubuntu 24.04) integrated with Microsoft Sentinel via Azure Arc and Azure Monitor Agent. Implemented syslog ingestion, authentication monitoring, and detection queries to simulate real-world SOC operations.
-
 # Hybrid SOC Homelab – Raspberry Pi 5 + Microsoft Sentinel
 
-## Project Overview
+## 📌 Project Overview
 
-## Architecture
+This project demonstrates the deployment of a hybrid SOC homelab using Raspberry Pi 5 integrated with Microsoft Sentinel via Azure Arc and Azure Monitor Agent.
 
-## Environment Setup
+The goal was to simulate real-world log ingestion and detection engineering workflows used in enterprise SOC environments.
 
-## Azure Arc Onboarding
+---
 
-## Data Collection Rule Configuration
+## 🏗 Architecture
 
-## Log Verification
+Raspberry Pi 5 (Ubuntu 24.04)
+→ Azure Arc
+→ Azure Monitor Agent
+→ Data Collection Rule
+→ Log Analytics Workspace
+→ Microsoft Sentinel
 
-## Detection Engineering
+---
 
-## Skills Demonstrated
+## ⚙ Environment Setup
 
+- Raspberry Pi 5
+- Ubuntu 24.04 LTS
+- Azure Subscription
+- Microsoft Sentinel enabled
+
+---
+
+## 🔌 Azure Arc Onboarding
+
+The Raspberry Pi was onboarded as a hybrid machine using Azure Arc.
+
+```bash
+sudo azcmagent show
