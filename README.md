@@ -136,6 +136,7 @@ Syslog
 | where SyslogMessage contains "Failed password"
 | summarize FailedAttempts=count() by Computer, bin(TimeGenerated, 10m)
 | where FailedAttempts >= 3
+
 ```
 
 Purpose:
@@ -150,7 +151,7 @@ Created a Scheduled Analytics Rule in Microsoft Sentinel:
 - Query: Brute-force detection KQL
 - Frequency: Every 5 minutes
 - Lookup period: Last 5 minutes
-- Trigger threshold: FailedAttempts > 3
+- Trigger threshold: FailedAttempts >= 3
 - Incident creation: Enabled
 
 Result:
