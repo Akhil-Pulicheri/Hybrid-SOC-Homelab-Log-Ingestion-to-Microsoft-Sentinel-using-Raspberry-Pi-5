@@ -14,7 +14,6 @@ Detect multiple failed SSH login attempts within a short time window to identify
 
 ---
 
-## Simulation Method
 
 ## Simulation Method
 
@@ -40,7 +39,7 @@ Syslog
 
 ## Expected Behavior
 
-If 3 or more failed attempts occur within 10 minutes...
+If 3 or more failed attempts occur within 10 minutes.
 
 ---
 
