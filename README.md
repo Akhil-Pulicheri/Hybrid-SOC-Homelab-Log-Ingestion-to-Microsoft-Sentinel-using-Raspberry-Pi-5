@@ -118,10 +118,12 @@ Simulated brute-force login attempts using invalid SSH credentials.
 
 Example:
 
+Repeated invalid SSH login attempts to generate authentication failure events:
+
 ```bash
 ssh invaliduser@localhost
-```
 
+```
 Generated authentication failure logs successfully ingested into Sentinel.
 
 ---
@@ -153,7 +155,7 @@ Created a Scheduled Analytics Rule in Microsoft Sentinel:
 - Lookup period: Last 5 minutes
 - Trigger threshold: FailedAttempts >= 3
 - Incident creation: Enabled
-- The analytics rule evaluates the last 5 minutes of data every 5 minutes. Events are grouped using a 10-minute aggregation bucket to consolidate related failed attempts before applying the threshold.
+- The analytics rule runs every 5 minutes and evaluates the previous 5 minutes of data. The query uses a 10-minute aggregation bucket to group related failed attempts for threshold evaluation.
 
 Result:
 Simulated brute-force attempts generated a Sentinel incident for investigation.
@@ -194,7 +196,7 @@ Observed:
 - SSH activity
 - System daemon logs
 
-Confirmed real-time visibility of edgeInta hybrid Linux endpoint.
+Confirmed real-time visibility of the hybrid Linux endpoint.
 
 ---
 
