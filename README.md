@@ -155,7 +155,7 @@ Created a Scheduled Analytics Rule in Microsoft Sentinel:
 - Lookup period: Last 5 minutes
 - Trigger threshold: FailedAttempts >= 3
 - Incident creation: Enabled
-- The analytics rule runs every 5 minutes and evaluates the previous 5 minutes of data. The query uses a 10-minute aggregation bucket to group related failed attempts for threshold evaluation.
+- The analytics rule runs every 5 minutes and evaluates the previous 5 minutes of data. Even though the rule evaluates the last 5 minutes of data, the query groups events into a 10-minute bucket — effectively aggregating those 5-minute events into a single detection evaluation window.
 
 Result:
 Simulated brute-force attempts generated a Sentinel incident for investigation.
