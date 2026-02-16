@@ -1,4 +1,4 @@
-# Hybrid SOC Homelab – Raspberry Pi 5 + Microsoft Sentinel
+≠# Hybrid SOC Homelab – Raspberry Pi 5 + Microsoft Sentinel
 
 > A hybrid security monitoring homelab built using Raspberry Pi 5 (Ubuntu 24.04) integrated with Microsoft Sentinel to simulate real-world log ingestion, detection engineering, and incident response workflows.
 
@@ -153,6 +153,7 @@ Created a Scheduled Analytics Rule in Microsoft Sentinel:
 - Lookup period: Last 5 minutes
 - Trigger threshold: FailedAttempts >= 3
 - Incident creation: Enabled
+- The analytics rule evaluates the last 5 minutes of data every 5 minutes. Events are grouped using a 10-minute aggregation bucket to consolidate related failed attempts before applying the threshold.
 
 Result:
 Simulated brute-force attempts generated a Sentinel incident for investigation.
