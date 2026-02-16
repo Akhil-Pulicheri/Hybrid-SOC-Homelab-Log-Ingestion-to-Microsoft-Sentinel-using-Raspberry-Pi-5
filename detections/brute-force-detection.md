@@ -58,7 +58,7 @@ Screenshot of detected failed SSH attempts:
 
 Screenshot of generated Sentinel incident:
 
-![My Photo]<img width="3360" height="1926" alt="image" src="https://github.com/user-attachments/assets/6574e010-7a5d-4044-97e5-321d6dc18bac" />
+![My Photo]![Git](https://github.com/user-attachments/assets/ba7c7178-2ac7-4791-ab6d-40845eb136c0)
 
 
 ---
