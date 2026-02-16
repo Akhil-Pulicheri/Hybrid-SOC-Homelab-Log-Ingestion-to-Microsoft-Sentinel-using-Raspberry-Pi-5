@@ -53,7 +53,8 @@ If more than 5 failed login attempts occur within 5 minutes, the query identifie
 
 Screenshot of detected failed SSH attempts:
 
-![Failed SSH Logs](../images/failed-ssh-logs.png)
+![My Photo]![Screenshot 2026-02-16 at 11 09 48 AM](https://github.com/user-attachments/assets/8b900f26-cc8b-4ffc-9be8-28f600e34f19)
+
 
 Screenshot of generated Sentinel incident:
 
