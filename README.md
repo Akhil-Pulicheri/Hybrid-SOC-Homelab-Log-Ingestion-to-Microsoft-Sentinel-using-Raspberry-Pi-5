@@ -132,10 +132,10 @@ Generated authentication failure logs successfully ingested into Sentinel.
 
 ```kql
 Syslog
-| where Facility == "authpriv"
+| where ProcessName == "sshd"
 | where SyslogMessage contains "Failed password"
-| summarize FailedAttempts = count() by Computer, bin(TimeGenerated, 5m)
-| where FailedAttempts > 3
+| summarize FailedAttempts=count() by Computer, bin(TimeGenerated, 10m)
+| where FailedAttempts >= 3
 ```
 
 Purpose:
