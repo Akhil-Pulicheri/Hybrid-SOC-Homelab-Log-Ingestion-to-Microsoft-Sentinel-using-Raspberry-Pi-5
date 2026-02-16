@@ -202,13 +202,45 @@ Confirmed real-time visibility of the hybrid Linux endpoint.
 
 ## 📸 Screenshots
 
-Include screenshots of:
+### 1️⃣ Azure Arc Machine Registration
 
-- Azure Arc machine registration
-- Data Collection Rule configuration
-- Sentinel log ingestion
-- Analytics rule configuration
-- Generated security incident
+![Azure Arc Registration]<img width="3356" height="1924" alt="image" src="https://github.com/user-attachments/assets/5d02bb03-5d89-4d8b-9c16-41ee5b5918d9" />
+
+
+
+---
+
+### 2️⃣ Data Collection Rule Configuration
+
+![DCR Configuration]<img width="3354" height="1926" alt="image" src="https://github.com/user-attachments/assets/413aed55-ba77-441a-beae-c80b3d1e2a57" />
+<img width="3360" height="1928" alt="image" src="https://github.com/user-attachments/assets/108d5a41-1d4b-4853-b7c3-cb86a66e4216" />
+
+
+
+
+---
+
+### 3️⃣ Sentinel Log Ingestion
+
+![Log Ingestion]<img width="3356" height="1924" alt="image" src="https://github.com/user-attachments/assets/e26155df-fa92-4857-99e2-9c9ded23de0b" />
+
+
+---
+
+### 4️⃣ Analytics Rule Configuration
+
+![Analytics Rule]<img width="3354" height="1924" alt="image" src="https://github.com/user-attachments/assets/9354e0e7-32ca-4add-957e-3385d3f98377" />
+
+
+---
+
+### 5️⃣ Generated Security Incident
+
+![Generated Incident]<img width="3360" height="1926" alt="image" src="https://github.com/user-attachments/assets/b243c005-34e0-4869-b21f-3471fea95ff3" />
+
+
+
+
 
 ---
 
