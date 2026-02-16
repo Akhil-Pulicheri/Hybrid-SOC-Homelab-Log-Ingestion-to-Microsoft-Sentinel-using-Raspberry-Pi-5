@@ -30,8 +30,8 @@ for i in {1..10}; do ssh fakeuser@localhost; done
 Syslog
 | where ProcessName == "sshd"
 | where SyslogMessage contains "Failed password"
-| summarize FailedAttempts=count() by HostIP, bin(TimeGenerated, 5m)
-| where FailedAttempts > 5
+| summarize FailedAttempts=count() by Computer, bin(TimeGenerated, 10m)
+| where FailedAttempts >= 3
 ```
 
 ---
