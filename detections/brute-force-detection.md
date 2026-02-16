@@ -16,10 +16,12 @@ Detect multiple failed SSH login attempts within a short time window to identify
 
 ## Simulation Method
 
-Generated multiple failed SSH login attempts intentionally:
+## Simulation Method
+
+Triggered multiple failed SSH login attempts manually by entering an incorrect password several times for a test account:
 
 ```bash
-for i in {1..10}; do ssh fakeuser@localhost; done
+ssh testuser@localhost
 ```
 
 ---
@@ -38,7 +40,7 @@ Syslog
 
 ## Expected Behavior
 
-If more than 5 failed login attempts occur within 5 minutes, the query identifies potential brute-force activity.
+If 3 or more failed attempts occur within 10 minutes...
 
 ---
 
