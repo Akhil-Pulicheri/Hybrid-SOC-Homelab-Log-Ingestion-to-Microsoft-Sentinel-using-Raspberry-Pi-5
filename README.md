@@ -210,8 +210,6 @@ Include screenshots of:
 - Analytics rule configuration
 - Generated security incident
 
-(Upload images to repository and reference them here.)
-
 ---
 
 ## ⚠ Challenges & Lessons Learned
