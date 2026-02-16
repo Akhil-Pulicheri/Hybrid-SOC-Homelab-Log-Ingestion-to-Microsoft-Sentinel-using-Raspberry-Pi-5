@@ -1,4 +1,4 @@
-# Hybrid SOC Homelab – Raspberry Pi 5 + Microsoft Sentinel
+## Hybrid SOC Homelab – Raspberry Pi 5 + Microsoft Sentinel
 
 > A hybrid security monitoring homelab built using Raspberry Pi 5 (Ubuntu 24.04) integrated with Microsoft Sentinel to simulate real-world log ingestion, detection engineering, and incident response workflows.
 
