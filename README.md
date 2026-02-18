@@ -200,6 +200,17 @@ Confirmed real-time visibility of the hybrid Linux endpoint.
 
 ---
 
+## Automated Response with Playbooks
+
+This project includes an Azure Sentinel playbook that:
+- Sends Discord notifications for security incidents
+- Extracts key incident fields
+- Demonstrates automated response (SOAR)
+
+See `azure-playbooks/` for details.
+
+---
+
 ## 📸 Screenshots
 
 ### 1️⃣ Azure Arc Machine Registration
