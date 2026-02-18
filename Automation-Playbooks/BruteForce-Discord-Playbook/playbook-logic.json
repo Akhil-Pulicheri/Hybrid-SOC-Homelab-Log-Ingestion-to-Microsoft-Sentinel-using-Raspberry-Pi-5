@@ -1,0 +1,243 @@
+{
+    "apiVersion": "2019-05-01",
+    "id": "/subscriptions/c2904e26-17a7-4247-9fcd-edafcf9ad811/resourceGroups/Resource_grp/providers/Microsoft.Logic/workflows/SOC-Bruteforce-Email",
+    "name": "SOC-Bruteforce-Email",
+    "type": "microsoft.logic/workflows",
+    "location": "uksouth",
+    "identity": {
+        "type": "SystemAssigned",
+        "principalId": "18f9b05c-dd20-4b47-9d3f-2b5f4b2f9085",
+        "tenantId": "96758b44-6ae3-4229-8c81-187ce877fe74"
+    },
+    "properties": {
+        "provisioningState": "Succeeded",
+        "createdTime": "2026-02-17T19:43:21.662Z",
+        "changedTime": "2026-02-18T01:38:38.639Z",
+        "state": "Enabled",
+        "version": "08584302281668484385",
+        "accessEndpoint": "https://prod-45.uksouth.logic.azure.com:443/workflows/30b556251209403a9ed1f9b323d1a87a",
+        "definition": {
+            "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+            "contentVersion": "1.0.0.0",
+            "parameters": {
+                "$connections": {
+                    "defaultValue": {},
+                    "type": "Object"
+                }
+            },
+            "triggers": {
+                "Microsoft_Sentinel_incident": {
+                    "type": "ApiConnectionWebhook",
+                    "inputs": {
+                        "host": {
+                            "connection": {
+                                "name": "@parameters('$connections')['azuresentinel']['connectionId']"
+                            }
+                        },
+                        "body": {
+                            "callback_url": "@{listCallbackUrl()}"
+                        },
+                        "path": "/incident-creation"
+                    }
+                }
+            },
+            "actions": {
+                "HTTP": {
+                    "runAfter": {},
+                    "type": "Http",
+                    "inputs": {
+                        "uri": "https://discord.com/api/webhooks/1473415430499733819/nPtq0CC-e6KXK3CahRGhEqpu4XcqOxWKU3Zy-dsrC9wMeIO2hEkNz8MXDs5-V8tG6pJr",
+                        "method": "POST",
+                        "headers": {
+                            "Content-Type\n": "application/json\n"
+                        },
+                        "body": {
+                            "content": "Sentinel Incident Triggered!\n\nTitle: @{triggerBody()?['object']?['properties']?['title']}\nSeverity: @{triggerBody()?['object']?['properties']?['severity']}\nCreated: @{triggerBody()?['object']?['properties']?['createdTimeUtc']}\nIP Address: @{if(empty(triggerBody()?['object']?['properties']?['relatedEntities']), 'No IP found', first(triggerBody()?['object']?['properties']?['relatedEntities'])?['properties']?['address'])}"
+                        }
+                    },
+                    "runtimeConfiguration": {
+                        "contentTransfer": {
+                            "transferMode": "Chunked"
+                        }
+                    }
+                }
+            },
+            "outputs": {}
+        },
+        "parameters": {
+            "$connections": {
+                "value": {
+                    "azuresentinel": {
+                        "id": "/subscriptions/c2904e26-17a7-4247-9fcd-edafcf9ad811/providers/Microsoft.Web/locations/uksouth/managedApis/azuresentinel",
+                        "connectionId": "/subscriptions/c2904e26-17a7-4247-9fcd-edafcf9ad811/resourceGroups/Resource_grp/providers/Microsoft.Web/connections/azuresentinel-SOC-Bruteforce-Email",
+                        "connectionName": "azuresentinel-SOC-Bruteforce-Email",
+                        "connectionProperties": {
+                            "authentication": {
+                                "type": "ManagedServiceIdentity"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "endpointsConfiguration": {
+            "workflow": {
+                "outgoingIpAddresses": [
+                    {
+                        "address": "20.108.102.123"
+                    },
+                    {
+                        "address": "20.90.204.188"
+                    },
+                    {
+                        "address": "20.90.223.4"
+                    },
+                    {
+                        "address": "20.26.15.70"
+                    },
+                    {
+                        "address": "20.26.13.151"
+                    },
+                    {
+                        "address": "4.159.24.241"
+                    },
+                    {
+                        "address": "4.250.55.134"
+                    },
+                    {
+                        "address": "4.159.24.255"
+                    },
+                    {
+                        "address": "4.250.55.217"
+                    },
+                    {
+                        "address": "172.165.88.82"
+                    },
+                    {
+                        "address": "4.250.82.111"
+                    },
+                    {
+                        "address": "4.158.106.101"
+                    },
+                    {
+                        "address": "4.158.105.106"
+                    },
+                    {
+                        "address": "4.250.51.127"
+                    },
+                    {
+                        "address": "4.250.49.230"
+                    },
+                    {
+                        "address": "4.159.26.128"
+                    },
+                    {
+                        "address": "172.166.86.30"
+                    },
+                    {
+                        "address": "4.159.26.151"
+                    },
+                    {
+                        "address": "4.159.26.77"
+                    },
+                    {
+                        "address": "4.159.59.140"
+                    },
+                    {
+                        "address": "4.159.59.13"
+                    },
+                    {
+                        "address": "85.210.65.206"
+                    },
+                    {
+                        "address": "85.210.120.102"
+                    },
+                    {
+                        "address": "4.159.57.40"
+                    },
+                    {
+                        "address": "85.210.66.97"
+                    },
+                    {
+                        "address": "20.117.192.192"
+                    }
+                ],
+                "accessEndpointIpAddresses": [
+                    {
+                        "address": "20.254.10.157"
+                    },
+                    {
+                        "address": "4.159.25.35"
+                    },
+                    {
+                        "address": "4.159.25.50"
+                    },
+                    {
+                        "address": "4.250.87.43"
+                    },
+                    {
+                        "address": "4.158.106.183"
+                    },
+                    {
+                        "address": "4.250.53.153"
+                    },
+                    {
+                        "address": "4.159.26.160"
+                    },
+                    {
+                        "address": "4.159.25.103"
+                    },
+                    {
+                        "address": "4.159.59.224"
+                    },
+                    {
+                        "address": "4.158.138.59"
+                    },
+                    {
+                        "address": "85.210.163.36"
+                    },
+                    {
+                        "address": "85.210.34.209"
+                    },
+                    {
+                        "address": "85.210.36.40"
+                    },
+                    {
+                        "address": "85.210.185.43"
+                    }
+                ]
+            },
+            "connector": {
+                "outgoingIpAddresses": [
+                    {
+                        "address": "51.140.74.150"
+                    },
+                    {
+                        "address": "51.140.80.51"
+                    },
+                    {
+                        "address": "51.140.61.124"
+                    },
+                    {
+                        "address": "51.105.77.96/27"
+                    },
+                    {
+                        "address": "51.140.148.0/28"
+                    },
+                    {
+                        "address": "20.90.129.0/27"
+                    },
+                    {
+                        "address": "20.90.129.32/28"
+                    },
+                    {
+                        "address": "20.90.125.211"
+                    },
+                    {
+                        "address": "20.90.124.134"
+                    }
+                ]
+            }
+        }
+    }
+}
