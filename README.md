@@ -207,7 +207,6 @@ This project includes an Azure Sentinel playbook that:
 - Extracts key incident fields
 - Demonstrates automated response (SOAR)
 
-See `azure-playbooks/` for details.
 
 ---
 
